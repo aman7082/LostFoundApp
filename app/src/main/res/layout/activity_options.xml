@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Options"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Display Settings -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Display Settings"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <Switch
+            android:id="@+id/switchDarkMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dark Mode"
+            android:padding="8dp"/>
+
+        <Switch
+            android:id="@+id/switchShowImages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Show Images"
+            android:checked="true"
+            android:padding="8dp"/>
+
+        <!-- Notification Settings -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Notification Settings"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"/>
+
+        <Switch
+            android:id="@+id/switchNotifications"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enable Notifications"
+            android:checked="true"
+            android:padding="8dp"/>
+
+        <Switch
+            android:id="@+id/switchLostItemAlerts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lost Item Alerts"
+            android:checked="true"
+            android:padding="8dp"/>
+
+        <Switch
+            android:id="@+id/switchFoundItemAlerts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Found Item Alerts"
+            android:checked="true"
+            android:padding="8dp"/>
+
+        <!-- Filter Settings -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Filter Settings"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerDefaultCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etDefaultLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Default Location"
+            android:inputType="text"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Account Settings -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Account Settings"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/etDefaultEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Default Contact Email"
+            android:inputType="textEmailAddress"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/btnSaveOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Options"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Reset Button -->
+        <Button
+            android:id="@+id/btnResetOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reset to Defaults"
+            android:layout_marginTop="8dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    
+    <!-- Outer circle with maroon border -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:strokeColor="#800000"
+        android:strokeWidth="3"
+        android:pathData="M54,10C29.7,10 10,29.7 10,54C10,78.3 29.7,98 54,98C78.3,98 98,78.3 98,54C98,29.7 78.3,10 54,10Z"/>
+    
+    <!-- Inner circle with maroon border -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:strokeColor="#800000"
+        android:strokeWidth="1.5"
+        android:pathData="M54,16C33.01,16 16,33.01 16,54C16,74.99 33.01,92 54,92C74.99,92 92,74.99 92,54C92,33.01 74.99,16 54,16Z"/>
+    
+    <!-- Sun with golden color -->
+    <path
+        android:fillColor="#FFD700"
+        android:pathData="M54,30C40.75,30 30,40.75 30,54C30,67.25 40.75,78 54,78C67.25,78 78,67.25 78,54C78,40.75 67.25,30 54,30Z"/>
+    
+    <!-- Sun rays -->
+    <path
+        android:fillColor="#FFD700"
+        android:strokeColor="#DAA520"
+        android:strokeWidth="1"
+        android:pathData="M54,24L58,16L54,24ZM64,27L72,20L64,28ZM74,36L84,30L74,38ZM78,54L88,54L78,56ZM74,72L84,78L74,70ZM64,81L72,88L64,80ZM54,84L58,92L54,82ZM44,81L36,88L44,80ZM34,72L24,78L34,70ZM30,54L20,54L30,56ZM34,36L24,30L34,38ZM44,27L36,20L44,28Z"/>
+    
+    <!-- Water with blue color -->
+    <path
+        android:fillColor="#0066B3"
+        android:pathData="M30,54C30,67.25 40.75,78 54,78C67.25,78 78,67.25 78,54C78,53 78,52 78,51C68,51 40,51 30,51C30,52 30,53 30,54Z"/>
+    
+    <!-- Wave details -->
+    <path
+        android:fillColor="#004D99"
+        android:pathData="M30,54C34,56 38,54 42,56C46,58 50,56 54,54C58,52 62,54 66,56C70,58 74,56 78,54L78,60C74,58 70,60 66,62C62,64 58,62 54,60C50,58 46,60 42,62C38,64 34,62 30,60L30,54Z"/>
+    
+    <!-- University name text at top -->
+    <path
+        android:fillColor="#800000"
+        android:pathData="M54,20C54,20 30,20 30,20C30,20 30,24 30,24C30,24 54,24 54,24C54,24 78,24 78,24C78,24 78,20 78,20C78,20 54,20 54,20Z"/>
+    
+    <!-- University name text at bottom -->
+    <path
+        android:fillColor="#800000"
+        android:pathData="M54,88C54,88 30,88 30,88C30,88 30,84 30,84C30,84 54,84 54,84C54,84 78,84 78,84C78,84 78,88 78,88C78,88 54,88 54,88Z"/>
+    
+    <!-- Sanskrit text at bottom (simplified representation) -->
+    <path
+        android:fillColor="#800000"
+        android:pathData="M54,82C54,82 36,82 36,82C36,82 36,80 36,80C36,80 54,80 54,80C54,80 72,80 72,80C72,80 72,82 72,82C72,82 54,82 54,82Z"/>
+    
+    <!-- Decorative elements around the circle -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#800000"
+        android:strokeWidth="1"
+        android:pathData="M20,20L16,16M88,20L92,16M20,88L16,92M88,88L92,92"/>
+    
+    <!-- Established year text -->
+    <path
+        android:fillColor="#800000"
+        android:pathData="M54,28C54,28 48,28 48,28C48,28 48,26 48,26C48,26 54,26 54,26C54,26 60,26 60,26C60,26 60,28 60,28C60,28 54,28 54,28Z"/>
+</vector>
+
+
+
+
+

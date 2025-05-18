@@ -1,0 +1,18 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+    id 'com.android.application' version '7.4.2' apply false
+}
+
+// Add this task to help diagnose build issues
+tasks.register('checkEnvironment') {
+    doLast {
+        println "Java Home: ${System.getProperty('java.home')}"
+        println "Java Version: ${System.getProperty('java.version')}"
+        println "Gradle Version: ${gradle.gradleVersion}"
+        println "OS Name: ${System.getProperty('os.name')}"
+        println "OS Version: ${System.getProperty('os.version')}"
+        println "OS Arch: ${System.getProperty('os.arch')}"
+    }
+}
+
+

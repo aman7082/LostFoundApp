@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Status colors -->
+    <color name="colorLost">#F44336</color>
+    <color name="colorFound">#4CAF50</color>
+    <color name="colorClaimed">#2196F3</color>
+    
+    <!-- Header colors -->
+    <color name="header_background">#3F51B5</color>
+    <color name="header_text">#FFFFFF</color>
+    
+    <!-- Background colors -->
+    <color name="background_light">#F5F5F5</color>
+    <color name="background_dark">#303030</color>
+    
+    <!-- Card colors -->
+    <color name="card_background">#FFFFFF</color>
+    <color name="card_background_dark">#424242</color>
+    <color name="ic_launcher_background">#5D2E8C</color>
+</resources>
+
+
+
+

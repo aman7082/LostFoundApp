@@ -1,0 +1,89 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.example.lostfoundapp'
+    compileSdk 32
+    
+    defaultConfig {
+        applicationId "com.example.lostfoundapp"
+        minSdk 24
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    
+    lintOptions {
+        abortOnError false
+        checkReleaseBuilds false
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
+    
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
+}
+
+// Apply the cleanup script
+apply from: "${rootDir}/cleanup.gradle"
+
+// Add a task to fix all XML files
+task fixAllXmlFiles {
+    doLast {
+        def resDir = new File("${rootDir}/app/src/main/res")
+        
+        resDir.eachFileRecurse { file ->
+            if (file.name.endsWith(".xml")) {
+                try {
+                    def content = file.text.trim()
+                    
+                    // Fix XML declaration
+                    if (!content.startsWith("<?xml")) {
+                        content = '<?xml version="1.0" encoding="utf-8"?>\n' + content
+                    }
+                    
+                    // Remove content after root element
+                    def rootTagName = content.find(/<([a-zA-Z0-9_-]+)[\s>]/) { match, tag -> tag }
+                    if (rootTagName) {
+                        def endTag = "</${rootTagName}>"
+                        def endTagIndex = content.lastIndexOf(endTag)
+                        if (endTagIndex > 0) {
+                            content = content.substring(0, endTagIndex + endTag.length())
+                        }
+                    }
+                    
+                    // Write fixed content
+                    file.text = content
+                    
+                    // Validate
+                    new XmlSlurper().parse(file)
+                    println "Fixed and validated: ${file.path}"
+                } catch (Exception e) {
+                    println "Failed to fix: ${file.path} - ${e.message}"
+                }
+            }
+        }
+    }
+}
+
+

@@ -1,0 +1,17 @@
+<!-- Contact Information -->
+<TextView
+    android:id="@+id/tvItemDetailContact"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:textSize="16sp"
+    tools:text="Email: example@email.com" />
+
+<TextView
+    android:id="@+id/tvItemDetailMobileContact"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:textSize="16sp"
+    tools:text="Mobile: 1234567890" />
+

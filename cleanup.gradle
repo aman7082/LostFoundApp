@@ -1,0 +1,75 @@
+// Simple cleanup script with minimal functionality to avoid NPEs
+
+task cleanupResources {
+    doLast {
+        println "Starting cleanupResources task"
+        try {
+            // Get project root directory safely
+            def rootDir = project?.rootDir
+            if (rootDir == null) {
+                println "Error: rootDir is null, cannot proceed"
+                return
+            }
+            println "Root directory: ${rootDir}"
+            
+            // Create res directory
+            def resDir = new File(rootDir, "app/src/main/res")
+            if (!resDir.exists()) {
+                boolean created = resDir.mkdirs()
+                println "Created resource directory: ${resDir.path} - Success: ${created}"
+            } else {
+                println "Resource directory already exists: ${resDir.path}"
+            }
+            
+            // Create values directory
+            def valuesDir = new File(resDir, "values")
+            if (!valuesDir.exists()) {
+                boolean created = valuesDir.mkdirs()
+                println "Created values directory: ${valuesDir.path} - Success: ${created}"
+            } else {
+                println "Values directory already exists: ${valuesDir.path}"
+            }
+            
+            // Create strings.xml file
+            def stringsFile = new File(valuesDir, "strings.xml")
+            try {
+                stringsFile.text = '<?xml version="1.0" encoding="utf-8"?>\n<resources>\n    <string name="app_name">Lost &amp; Found</string>\n</resources>'
+                println "Created strings.xml file"
+            } catch (Exception e) {
+                println "Error creating strings.xml: ${e.message}"
+            }
+            
+            println "cleanupResources task completed"
+        } catch (Exception e) {
+            println "Fatal error in cleanupResources task: ${e.message}"
+            e.printStackTrace()
+        }
+    }
+}
+
+// Extremely simplified validation task
+task validateResources {
+    doLast {
+        println "Starting validateResources task"
+        try {
+            def rootDir = project?.rootDir
+            if (rootDir == null) {
+                println "Error: rootDir is null, cannot proceed"
+                return
+            }
+            
+            def resDir = new File(rootDir, "app/src/main/res")
+            if (!resDir.exists()) {
+                println "Resource directory does not exist: ${resDir.path}"
+                return
+            }
+            
+            println "Resource directory exists, validation complete"
+        } catch (Exception e) {
+            println "Fatal error in validateResources task: ${e.message}"
+            e.printStackTrace()
+        }
+    }
+}
+
+
