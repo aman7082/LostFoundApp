@@ -56,7 +56,7 @@ dependencies {
 ### From Source
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/lost-found-app.git
+   git clone https://github.com/aman7082/lost-found-app.git
    ```
 2. Open the project in Android Studio
 3. Build and run on your device or emulator
