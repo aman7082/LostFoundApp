@@ -1,6 +1,5 @@
 # Lost & Found - University Campus App
 
-![Lost & Found App](https://via.placeholder.com/800x400?text=Lost+and+Found+App)
 
 ## Overview
 
@@ -27,20 +26,6 @@ Lost & Found is an Android application designed to help university students and 
 - **Dark Mode Support**: Comfortable viewing in any lighting condition
 - **Responsive Design**: Works on phones and tablets of all sizes
 
-## Screenshots
-
-<table>
-  <tr>
-    <td><img src="https://via.placeholder.com/250x500?text=Home+Screen" alt="Home Screen" width="250"/></td>
-    <td><img src="https://via.placeholder.com/250x500?text=Item+Details" alt="Item Details" width="250"/></td>
-    <td><img src="https://via.placeholder.com/250x500?text=Report+Item" alt="Report Item" width="250"/></td>
-  </tr>
-  <tr>
-    <td><img src="https://via.placeholder.com/250x500?text=Comments" alt="Comments" width="250"/></td>
-    <td><img src="https://via.placeholder.com/250x500?text=Dark+Mode" alt="Dark Mode" width="250"/></td>
-    <td><img src="https://via.placeholder.com/250x500?text=Settings" alt="Settings" width="250"/></td>
-  </tr>
-</table>
 
 ## Technical Details
 
